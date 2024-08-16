@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">practica1</string>
+    <!-- Otras cadenas -->
+    <string-array name="category_array">
+        <item>Producto</item>
+        <item>Mantenimiento</item>
+    </string-array>
 </resources>

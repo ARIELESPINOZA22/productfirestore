@@ -20,10 +20,17 @@
                     android:id="@+id/txttitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Registro Producto"
+                    android:text="Registro"
                     android:padding="20dp"
                     android:textSize="30dp"
                     android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/category_array"
+                    android:padding="5dp"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"

@@ -7,18 +7,23 @@
     tools:context=".MainActivity3">
 
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menu Principal"
-            android:layout_gravity="center"
-            android:padding="10dp"
-            android:onClick="menu3"/>
+            android:text="Selecciona la categoría:" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/category_array" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,10 +59,10 @@
         <ListView
             android:id="@+id/listViewProducts"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1" />
-
     </LinearLayout>
+
 
 
 
