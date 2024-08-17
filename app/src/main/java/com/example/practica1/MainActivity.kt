@@ -25,4 +25,8 @@ class MainActivity : AppCompatActivity() {
     fun searchprod(view: View) {
         startActivity(Intent(this,MainActivity3::class.java))
     }
+
+    fun searchproddate(view: View) {
+        startActivity(Intent(this,MainActivity4::class.java))
+    }
 }
