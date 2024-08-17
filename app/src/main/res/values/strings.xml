@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">practica1</string>
+    <string name="app_name">ARESGPS</string>
     <!-- Otras cadenas -->
     <string-array name="category_array">
         <item>Producto</item>
