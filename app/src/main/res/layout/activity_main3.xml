@@ -7,27 +7,41 @@
     tools:context=".MainActivity3">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Selecciona la categoría:" />
+            android:gravity="center"
+            android:text="Busqueda Fecha"
+            android:textSize="34sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona la categoría:"
+            android:textSize="20dp" />
 
         <Spinner
             android:id="@+id/spinnerCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/plomoclaro"
             android:entries="@array/category_array" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selecciona la fecha de inicio:" />
+            android:text="Selecciona la fecha de inicio:"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextStartDate"
@@ -35,12 +49,14 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             android:hint="Seleccionar fecha"
+            android:background="@color/plomoclaro"
             android:clickable="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selecciona la fecha final:" />
+            android:text="Selecciona la fecha final:"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextEndDate"
@@ -48,7 +64,12 @@
             android:layout_height="wrap_content"
             android:focusable="false"
             android:hint="Seleccionar fecha"
+            android:background="@color/plomoclaro"
             android:clickable="true" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
 
         <Button
             android:id="@+id/btnFetch"
@@ -60,7 +81,8 @@
             android:id="@+id/listViewProducts"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@color/plomoclaro" />
     </LinearLayout>
 
 

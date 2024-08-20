@@ -10,7 +10,6 @@
 
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -20,17 +19,33 @@
                     android:id="@+id/txttitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Registro"
                     android:padding="20dp"
-                    android:textSize="30dp"
-                    android:textAlignment="center" />
+                    android:text="REGISTRO"
+                    android:textAlignment="center"
+                    android:textSize="30dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Eliga el tipo de registro"
+                    android:textSize="20sp" />
 
                 <Spinner
                     android:id="@+id/spinnerCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/plomoclaro"
                     android:entries="@array/category_array"
-                    android:padding="5dp"/>
+                    android:padding="5dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"

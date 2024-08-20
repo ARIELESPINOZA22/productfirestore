@@ -4,52 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/azul"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btnAddProd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="registrosprod"
         android:text="AdicionarProduco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="registrosprod"/>
+        app:layout_constraintVertical_bias="0.433" />
 
     <Button
         android:id="@+id/btnsearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="searchprod"
         android:text="Busqueda Fecha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddProd"
-        android:onClick="searchprod" />
+        app:layout_constraintTop_toBottomOf="@+id/btnAddProd" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="135dp"
-        android:layout_height="90dp"
+        android:layout_width="193dp"
+        android:layout_height="128dp"
         android:background="#0005000E"
         app:layout_constraintBottom_toTopOf="@+id/btnAddProd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.765"
-        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+        app:layout_constraintVertical_bias="0.773"
+        app:srcCompat="@android:drawable/ic_menu_agenda" />
 
     <TextView
         android:id="@+id/textViewti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:text="ESSAT - GPS"
-        android:textSize="30dp"
         android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,12 +59,24 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="searchproddate"
         android:text="Busqueda Dato"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnsearch"
-        app:layout_constraintVertical_bias="0.0"
-        android:onClick="searchproddate"/>
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ARES-APP-2024   Ver 1.0  "
+        android:textColor="@color/plomoclaro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.769" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

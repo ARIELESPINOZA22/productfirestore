@@ -1,8 +1,10 @@
 package com.example.practica1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.core.content.ContextCompat.startActivity
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -11,6 +13,8 @@ class MainActivity4 : AppCompatActivity() {
     private lateinit var editTextSearch: EditText
     private lateinit var buttonSearch: Button
     private lateinit var listViewResults: ListView
+
+
 
     private val db = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
