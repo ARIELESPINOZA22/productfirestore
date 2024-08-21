@@ -10,14 +10,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/azul"
         android:padding="16dp">
 
         <!-- Campo para el correo electrónico -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPS"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo electrónico"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:layout_marginBottom="16dp"/>
@@ -27,10 +43,12 @@
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:hint="Contraseña"
             android:inputType="textPassword"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp"/>
+            android:padding="10dp" />
 
         <!-- Botón para registrarse -->
         <Button
