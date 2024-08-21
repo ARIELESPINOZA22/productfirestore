@@ -81,8 +81,4 @@ class MainActivity2 : AppCompatActivity() {
             }
         }
     }
-
-    fun menup2(view: View) {
-        startActivity(Intent(this,MainActivity::class.java))
-    }
 }
