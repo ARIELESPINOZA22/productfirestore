@@ -122,7 +122,12 @@ class MainActivity3 : AppCompatActivity() {
                             SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(
                                 timestamp
                             )
-                        val productInfo = "$name - $brand - $model - $note - $formattedDate"
+                        val productInfo = "Nombre: $name\n" +
+                                "Marca: $brand\n" +
+                                "Modelo: $model\n" +
+                                "Nota: $note\n" +
+                                "Categoría: $category\n" +
+                                "FechaRegistro: $formattedDate"
                         productsList.add(productInfo)
                     }
 

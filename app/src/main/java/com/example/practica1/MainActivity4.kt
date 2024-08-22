@@ -5,16 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.core.content.ContextCompat.startActivity
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 class MainActivity4 : AppCompatActivity() {
 
     private lateinit var editTextSearch: EditText
     private lateinit var buttonSearch: Button
     private lateinit var listViewResults: ListView
-
-
 
     private val db = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,13 +103,17 @@ class MainActivity4 : AppCompatActivity() {
     }
 
     private fun extractProductInfo(document: DocumentSnapshot): String {
+
+
+
         val name = document.getString("name") ?: "Sin nombre"
         val brand = document.getString("brand") ?: "Sin marca"
         val model = document.getString("model") ?: "Sin modelo"
         val note = document.getString("note") ?: "Sin nota"
         val category = document.getString("category") ?: "Sin categoría"
+        val timestamp = document.getTimestamp("timestamp")?.toDate()
 
-        return "Nombre: $name\nMarca: $brand\nModelo: $model\nNota: $note\nCategoría: $category"
+        return "Nombre: $name\nMarca: $brand\nModelo: $model\nNota: $note\nCategoría: $category\nFechaRegistro: $timestamp"
     }
 
 
