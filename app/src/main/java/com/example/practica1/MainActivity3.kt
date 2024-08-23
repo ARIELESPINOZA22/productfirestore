@@ -124,7 +124,7 @@ class MainActivity3 : AppCompatActivity() {
                             )
                         val productInfo = "Nombre: $name\n" +
                                 "Marca: $brand\n" +
-                                "Modelo: $model\n" +
+                                "Codigo: $model\n" +
                                 "Nota: $note\n" +
                                 "Categoría: $category\n" +
                                 "FechaRegistro: $formattedDate"

@@ -47,9 +47,9 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation ("com.google.firebase:firebase-firestore-ktx")
 
-        implementation ("com.google.firebase:firebase-firestore-ktx:24.7.0")
-        implementation ("com.google.firebase:firebase-auth-ktx:22.0.0")
+    implementation ("com.google.firebase:firebase-firestore-ktx:24.7.0")
+    implementation ("com.google.firebase:firebase-auth-ktx:22.0.0")
 
-
+    implementation ("net.sourceforge.jexcelapi:jxl:2.6.12")
 
 }

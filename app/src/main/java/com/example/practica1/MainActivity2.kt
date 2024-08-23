@@ -15,6 +15,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 import com.google.firebase.Timestamp
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity2 : AppCompatActivity() {
 
@@ -27,6 +28,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var spinnerCategory: Spinner
 
     private val db = FirebaseFirestore.getInstance()
+    private val auth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,15 +53,20 @@ class MainActivity2 : AppCompatActivity() {
                 // Mostrar mensaje si algún campo está vacío
                 Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
             } else {
-                // Crear el registro si todos los campos están completos
+                // Obtener el correo electrónico del usuario autenticado
+                val currentUser = auth.currentUser
+                val userEmail = currentUser?.email
 
-            val product = hashMapOf(
+                if (userEmail != null) {
+                // Crear el registro si todos los campos están completos
+                 val product = hashMapOf(
                 "name" to etProductName.text.toString(),
                 "brand" to etBrand.text.toString(),
                 "model" to etModel.text.toString(),
                 "note" to etNote.text.toString(),
                 "category" to category, // Guardar la categoría seleccionada
-                "timestamp" to Timestamp.now() // Agregar la fecha y hora actual
+                "timestamp" to Timestamp.now(), // Agregar la fecha y hora actual
+                     "userEmail" to userEmail // Agregar el correo electrónico del usuario
             )
 
             db.collection("products")
@@ -77,6 +84,9 @@ class MainActivity2 : AppCompatActivity() {
                 }
                 .addOnFailureListener {
                     tvStatus.text = "Error al guardar el producto"
+                }
+                } else {
+                    Toast.makeText(this, "No se pudo obtener el correo electrónico del usuario", Toast.LENGTH_SHORT).show()
                 }
             }
         }

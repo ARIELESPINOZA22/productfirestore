@@ -77,12 +77,6 @@
             android:layout_height="wrap_content"
             android:text="Buscar" />
 
-        <Button
-            android:id="@+id/btnExport"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Exportar" />
-
         <ListView
             android:id="@+id/listViewProducts"
             android:layout_width="match_parent"
@@ -90,8 +84,6 @@
             android:layout_weight="1"
             android:background="@color/plomoclaro" />
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

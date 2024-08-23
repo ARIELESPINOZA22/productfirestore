@@ -111,9 +111,11 @@ class MainActivity4 : AppCompatActivity() {
         val model = document.getString("model") ?: "Sin modelo"
         val note = document.getString("note") ?: "Sin nota"
         val category = document.getString("category") ?: "Sin categoría"
+        val userEmail = document.getString("userEmail") ?: "Sin categoría"
         val timestamp = document.getTimestamp("timestamp")?.toDate()
 
-        return "Nombre: $name\nMarca: $brand\nModelo: $model\nNota: $note\nCategoría: $category\nFechaRegistro: $timestamp"
+
+        return "Nombre: $name\nMarca: $brand\nCodigo: $model\nNota: $note\nCategoría: $category\nFechaRegistro: $timestamp\nRegistro de activo: $userEmail"
     }
 
 
